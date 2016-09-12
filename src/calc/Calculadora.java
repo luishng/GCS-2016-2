@@ -1,6 +1,15 @@
 package calc;
 
 public class Calculadora {
+    
+    public Double subtraction(Double firstNumber, Double secondNumber){
+        Double result;
+        
+        result = firstNumber - secondNumber;
+        
+        return result;
+    }
+    
   private double numero1;
   private double numero2;
   private double resultado;
