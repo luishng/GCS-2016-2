@@ -14,6 +14,14 @@ public class Calculadora {
   private double numero2;
   private double resultado;
 
+
+
+
+
+
+  public double multiplica(double numero1, double numero2){
+    return numero1*numero2;
+  } 
   public  Double soma(Double A, Double B){
         return A+B;
    }
