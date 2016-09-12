@@ -28,21 +28,27 @@ public class Principal {
 			System.out.println("4 - Divisão");
 			System.out.println("5 - Sair");
 			opcao = scanner.nextInt();
-			System.out.println("Primeiro numero:");
-			numero1 = scanner.nextDouble();
-			System.out.println("Segundo numero:");
-			numero2 = scanner.nextDouble();
 			
+			if(opcao == SOMA || opcao == SUBTRACAO || opcao == MULTIPLICACAO || opcao == DIVISAO ){
+				System.out.println("Primeiro numero:");
+				numero1 = scanner.nextDouble();
+				System.out.println("Segundo numero:");
+				numero2 = scanner.nextDouble();
+					
+			}
 			
 			switch(opcao){
 				case SOMA:
 					System.out.println("Voce esta na Soma");
+					resultado = calc.soma(numero1, numero2);
 					break;
 				case SUBTRACAO:
 					System.out.println("Voce esta na Subtracao");
+					resultado = calc.subtraction(numero1, numero1);
 					break;
 				case MULTIPLICACAO:
 					System.out.println("Voce esta na Multiplicacao");
+					resultado = calc.multiplica(numero1, numero2);
 					break;
 				case DIVISAO:
 					System.out.println("Voce esta na Divisao");
@@ -56,7 +62,8 @@ public class Principal {
 					break;
 				
 			}
-			System.out.println("O resultado é: " +resultado);
+			if(opcao == SOMA || opcao == SUBTRACAO || opcao == MULTIPLICACAO || opcao == DIVISAO )
+				System.out.println("O resultado é: " +resultado);
 		}while(opcao != 5);
 	}
 }
